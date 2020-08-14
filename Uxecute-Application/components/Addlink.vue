@@ -21,15 +21,15 @@
             <form v-else v-on:submit.prevent="add">
                 <span>New Link</span>
                 <div class="field">
-                <input type="text" id="newLinkName" :value="edit.name"  placeholder=" "/>
+                <input type="text" id="newLinkName"  placeholder=" "/>
                 <label class="input-text-label">Name</label>
                 </div>
                 <div class="field">
-                    <input type="text" id="newLinkURL" :value="edit.url" placeholder=" "/>
+                    <input type="text" id="newLinkURL" placeholder=" "/>
                     <label class="input-text-label">URL</label>
                 </div>
                 <div class="field">
-                    <input type="text" id="newLinkIcon" :value="edit.icon" placeholder=" "/>
+                    <input type="text" id="newLinkIcon"  placeholder=" "/>
                     <label class="input-text-label">Icon</label>
                 </div>
                 <button>Add</button>
@@ -65,6 +65,9 @@ module.exports =  {
             if (this.fieldIsEmpty()) return;
             this.$emit('clicked');
             this.$emit('add-item', this.getInput())   
+            document.getElementById("newLinkName").value = ""
+            document.getElementById("newLinkURL").value = ""
+            document.getElementById("newLinkIcon").value = ""
         },
         fieldIsEmpty: function(){
             if (document.getElementById("newLinkName").value == "") return true

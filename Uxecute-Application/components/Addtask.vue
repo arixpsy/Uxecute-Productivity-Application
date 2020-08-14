@@ -39,6 +39,8 @@ module.exports =  {
             if (this.fieldIsEmpty()) return;
             this.$emit('clicked');
             this.$emit('add-task', this.getInput())   
+            this.taskDescription = ""
+            this.taskDeadline = ""
         },
         fieldIsEmpty: function(){
             if (document.getElementById("newTaskDescription").value == "") return true
