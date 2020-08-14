@@ -90,13 +90,31 @@ This is where I stumbled across Electron JS which allows me to use my Javascript
 - Create a new link for a user based on link object sent in request body.
 
 #### api/links/{link_id} [PATCH]
-- Update an existing link based on ```{link id}``` and link parameters sent in request body.
+- Update an existing link based on ```{link_id}``` and link parameters sent in request body.
 
 #### api/links/{link_id} [DELETE]
-- Delete an existing link based on ```{link id}```.
+- Delete an existing link based on ```{link_id}```.
   
-#### api/tasks
-#### api/users
+#### api/tasks [GET]
+- Get all existing tasks based on email sent in request query.
+
+#### api/tasks [POST]
+- Create a new task for a user based on link object sent in request body.
+
+#### api/tasks/{task_id} [PATCH]
+- Update an existing task based on ```{task_id}``` and task parameters sent in request body.
+
+#### api/tasks/{task_id} [DELETE]
+- Delete an existing task based on ```{task_id}```.
+
+#### api/users/login [POST]
+- Return user data based on email and password sent in request body.
+
+#### api/users [POST]
+- Create a new user based on the user object sent in request body.
+
+#### api/users/{user_email} [PATCH]
+- Update an existing user's settings based on ```{user_email}``` and user parameters sent in request body.
 
 ## Installation (Serve Locally, Build)
 #### Desktop Application (Windows)
@@ -124,5 +142,3 @@ npm run package-win
 cd Uxecute-Backend
 npm start
 ```
-
-## Credits
