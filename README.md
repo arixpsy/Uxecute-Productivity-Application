@@ -12,9 +12,21 @@ Uxecute Productivity Application (2020 Summer Side Project)
 <img width="100%" src="./Images/Uxecute-Overview.gif">
 
 
-## Motivation
+## Motivation (Developer Dairy)
 
-> To be Updated
+Currently, I have just finished my second year of university in SMU(Singapore Management University). During my
+first year in SMU, I've made about 2 similar applications as the one I've created here. They all function the same
+whereby the solution is a dashboard-like application where it tells the time and weather and also features a todo list to manage tasks I do from day to day. 
+
+However, from the 2 I've have made previously there was only one that I use regularly everyday which was a chrome
+extension (Not fully developed) that I set as the default homepage for my chrome browser. During the summer of 2020, I really wanted to create and complete a desktop application that can intergrate with my everyday tasks.
+
+This is where I stumbled across Electron JS which allows me to use my Javascript knowledge to build cross platform desktop apps. After, following several tutorials on Youtube, I knew that this was what I needed to create my ideal application.
+
+
+> Why a desktop application and why fixed the resolution to 800 x 480?
+
+
 
 ## Tech Stack
 
@@ -71,7 +83,20 @@ Uxecute Productivity Application (2020 Summer Side Project)
 > To be Updated
 
 ## Backend API Reference
-> To be Updated
+#### api/links [GET]
+- Get all existing links based on email sent in request query.
+
+#### api/links [POST]
+- Create a new link for a user based on link object sent in request body.
+
+#### api/links/{link_id} [PATCH]
+- Update an existing link based on ```{link id}``` and link parameters sent in request body.
+
+#### api/links/{link_id} [DELETE]
+- Delete an existing link based on ```{link id}```.
+  
+#### api/tasks
+#### api/users
 
 ## Installation (Serve Locally, Build)
 #### Desktop Application (Windows)
