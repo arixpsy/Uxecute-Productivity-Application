@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uxecute</title>
+    <link rel='stylesheet' href="./assets/css/main.css" />
+    <script src="https://unpkg.com/vue"></script> 
+    <script src="https://unpkg.com/http-vue-loader"></script> 
+</head>
+<body>
+    <div id="app">
+        <App></App>
+    </div>
+    <script>
+        // Import .env
+        require('dotenv').config()
+
+        // Import ipcRenderer
+        const electron = require('electron');
+
+        //Import axios
+        const axios = require('axios').default;
+
+        // Initialize Vue Application
+        var vueApp = new Vue({
+            el: '#app',
+            components: {
+                'App': httpVueLoader('./components/App.vue')
+            }
+        });
+    </script>
+
+</body>
+</html>

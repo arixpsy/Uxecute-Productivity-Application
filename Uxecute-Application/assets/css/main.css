@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+:root {
+    --nav-bar-color: #252525;
+    --light-grey: #A4A4A4;
+    --dark-grey: #404040;
+    --blue: #99E1E5;
+    --orange: #F2C6B4;
+    --red: #FBAFAF;
+    --yellow: #F3E8CB;
+    --white: whitesmoke;
+    --green: #9fe79f;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+.container{
+    padding: 15px 25px;
+    height: 100vh;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    background-color: var(--white);
+}
+.container > div:first-child{
+    font-weight: 600;
+    font-size: 1.3rem;
+    font-style: normal;
+    color: var(--dark-grey);
+    margin-bottom: 5px;
+}
+.overlay, .modal-exit{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.overlay{
+    z-index: 5;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal{
+    position: relative;
+    background-color: var(--white);
+    border-radius: 15px;
+    padding: 25px;
+    z-index: 10;
+}
+.modal-exit{
+    z-index: 8;
+}
+form > span {
+    font-weight: 600;
+    font-size: 1.3rem;
+    font-style: normal;
+    text-align: center;
+}
+.field{
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+    margin: 1.5rem auto 0rem;
+    border-bottom: 2px solid var(--light-grey);
+}
+.field::after{
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    bottom: -2px;
+    left: 0;
+    background-color: var(--dark-grey);
+    transition: 0.5s ease-out transform;
+    transform-origin: left;
+    transform: scaleX(0);
+}
+.field:focus-within::after{
+    transform: scaleX(1);
+}
+.field:focus-within label, input:not(:placeholder-shown) + label.input-text-label{
+    font-weight: 600;
+    transform: scale(0.8) translateY(-2.5rem);
+    color: var(--dark-grey);
+}
+label.input-text-label{
+    color: var(--light-grey);
+    font-size: 1.2rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: translate(0.5rem, -0.5rem);
+    transition: 0.25s ease-out all;
+    pointer-events: none;
+}
+input[type='text'], input[type='password'], input[type='date']{
+    outline: none;
+    border: none;
+    overflow: hidden;
+    width: 100%;
+    background: none;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    color: var(--dark-grey);
+}
+button {
+    margin-top:1.5rem;
+    font-size: 1.2rem;
+    background-color: var(--white);
+    border: 5px solid var(--blue);
+    color: var(--dark-grey);
+    font-weight: 600;
+    outline: none;
+    text-align: center;
+    padding: 0.5rem;
+    border-radius: 100vh;
+    cursor: pointer;
+    transition: 0.25s ease-out background-color;
+    width: 100%;
+}
+button:hover{
+    background-color: var(--blue);
+}
+button.dark{
+    background-color: var(--dark-grey);
+    border: 5px solid var(--dark-grey);
+    color: var(--white);
+    transition: 0.25s ease-out transform;
+}
+button.dark:hover{
+    transform: scale(1.05);
+}
