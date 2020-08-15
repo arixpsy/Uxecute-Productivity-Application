@@ -24,9 +24,9 @@ extension (Not fully developed) that I set as the default homepage for my chrome
 This is where I stumbled across Electron JS which allows me to use my Javascript knowledge to build cross platform desktop apps. After, following several tutorials on Youtube, I knew that this was what I needed to create my ideal application.
 
 
-> Why a desktop application and why fixed the resolution to 800 x 480?
+> So why a desktop application and why fixed the resolution to 800 x 480?
 
-
+> To Be Updated
 
 ## Tech Stack
 
@@ -75,12 +75,69 @@ This is where I stumbled across Electron JS which allows me to use my Javascript
 </div>
 
 ## Functionalities
-#### Home Dashboard
-> To be Updated
-#### Tasks
-> To be Updated
-#### Links
-> To be Updated
+### Home Dashboard
+
+<img width="100%" src="./Images/Uxecute-Home.gif">
+
+##### Date, Time & Weather
+- Displays the current date, time and weather conditions based on the user's country.
+- Weather data is drawn from the Weather Stack API.
+- User's country is saved in the database and drawn when the user logs into the application.
+  
+##### Calendar
+- Calendar built from scratch. Entire Calendar consists of two vue components which are Calendar.vue (Parent) and Calendarday.vue (Child).
+- Each of the Calendar Day render will display a dot under its date if there are existing tasks that are completed that day(Green dot) or any tasks that have deadlines on that day(Red dot).
+- Each Calendar Day can be clicked which will trigger the Task Widget on the right to display the tasks related to that day.
+
+##### Task Widget
+- Displays the Tasks based on the active tab (Today, This Week & This Month)
+  - This Month
+    - Displays all the tasks that have deadlines in the current month
+  - This Week
+    - Display all the tasks that have deadlines in the current week.
+  - Today or Specified Date from Calendar Component
+    - If specified date is today, display tasks that have deadlines today.
+    - If specified date is in the past, display tasks that have been completed that day.
+    - If specified date is in the future, display tasks that have deadlines that day.
+___
+
+### Tasks Tab
+
+<img width="100%" src="./Images/Uxecute-Tasks.gif">
+
+##### Display Tasks
+- Displays existing tasks created by the user. Tasks are separated where incompleted tasks are rendered at the top and completed task at the bottom.
+
+##### Add/Delete Tasks
+- Adding of tasks will be completed in a pop-up modal. Users will have to indicate a task description and a deadline.
+  - The indication of deadline is done using ```<input type="date">``` thus users wont have to worry about the formatting of the date string. (Not captured in the GIF.)
+- Deleting of tasks can be done in the list by hovering on a existing task and clicking the cross emoji.
+  
+##### Archived Completed Tasks
+- (To Be Updated)
+___
+
+### Links Tab
+
+<img width="100%" src="./Images/Uxecute-Links.gif">
+
+##### Display Links
+- Displays existing links created by the user.
+- Users can click on the 'cards' which will open the default browser on the system and direct the user to the site.
+  
+##### Add/Update/Delete Links
+- Adding of links will be completed in a pop-up modal. Users will have to indicate a name, url and icon for the link.
+    - Icons can be text instead of emojis.
+- Editing and deleting existing links can be done by right clicking on the 'card' which will show buttons for each action.
+  - Editing will be done in a similar modal as the adding a new link.
+  - Deleting will be done instantly by clicking on the delete icon without confirmation.
+
+##### Keyboard Control
+- Users can access the links tab using the keyboard without having to use the mouse
+  - *Note that the application should be open for the keyboard shortcuts to work*
+  - "Ctrl + windows + z" will set focus the the entire Uxecute application
+  - "Tab" will used to shift between the Navbar items and "Enter" will open that specific screen/slide
+  - Users can then use the arrows keys to navigate between the Link 'cards' and "Enter" will open the links in the default browser.
 
 ## Backend API Reference
 #### api/links [GET]
