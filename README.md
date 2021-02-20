@@ -12,7 +12,7 @@ Uxecute Productivity Application (2020 Summer Side Project)
 <img width="100%" src="./Images/Uxecute-Overview.gif">
 
 
-## Motivation (Developer's Dairy)
+## Motivation (Developer's Diary)
 
 Currently, I have just finished my second year of university in SMU(Singapore Management University). During my
 first year in SMU, I've made about 2 similar applications as the one I've created here. They all function the same
@@ -30,7 +30,7 @@ Although there wasn't any issues with the previous 2 application. It wasn't very
 
 >  why fixed the application screen size to 800 x 480?
 
-800 x 480 resolution is special because it is the exact screen size of a mini LCD screen for a raspberry pie. I had bought one of these screens previously and thought it would be a good idea to build an application around it. I could easily carry around the screen and connect it to my laptop. This way i could always have the home dashboard view at the corner of my eyes.
+800 x 480 resolution is special because it is the exact screen size of a mini LCD screen for a raspberry pi. I had bought one of these screens previously and thought it would be a good idea to build an application around it. I could easily carry around the screen and connect it to my laptop. This way i could always have the home dashboard view at the corner of my eyes.
 
 ## Tech Stack
 
